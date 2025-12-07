@@ -16,14 +16,18 @@
     <section id="landing-page">
       <nav>
         <figure>
-          <img id="personal-logo" src="./assets/logo.png" alt="" />
+          <img
+            id="personal-logo"
+            src="./assets/logo.png"
+            alt="John Winborne logo"
+          />
         </figure>
         <ul class="nav_link-list">
           <li class="nav_link">
             <a href="#previous_work" class="nav_link-anchor">Previous Work</a>
           </li>
           <li class="nav_link">
-            <a href="#" class="nav_link-anchor">About</a>
+            <a href="#landing-page" class="nav_link-anchor">About</a>
           </li>
           <li class="nav_link">
             <a href="#projects" class="nav_link-anchor">Projects</a>
@@ -34,8 +38,12 @@
         </ul>
       </nav>
       <header class="header">
+        <figure>
+          <img src="assets/Me.jpg" class="header_img" alt="Photo of John" />
+        </figure>
+
         <div>
-          <h1 class="color">I'm John.</h1>
+          <h1 class="color">Hi, I'm John.</h1>
           <p class="about-me">
             <!--write more about me -->
             I'm a <b class="color">Student at Portland State University</b>
@@ -43,7 +51,6 @@
             <br />
             Here are some things about me.
           </p>
-          
         </div>
       </header>
     </section>
@@ -53,35 +60,105 @@
       </h1>
 
       <figure class="previous_work-fig">
-        <img src="assets/Resume.png" class="resume_img" alt="resume image">
+        <img src="assets/Resume.png" class="resume_img" alt="resume image" />
       </figure>
-
     </section>
-    <section id="projects"></section>
+    <section id="projects">
+      <div class="projects_container">
+        <div class="projects_row">
+          <h1 class="section_title color">Some of my projects</h1>
+          <ul>
+            <li class="project">
+              <div class="project_wrapper">
+                <img
+                  src="assets/cat_website.png"
+                  class="project_img"
+                  alt="Screenshot of my Cat Website homepage"
+                />
+                <div class="project_description">
+                  <h3 class="project_description-title">Cat Website</h3>
+                  <h4>HTML, CSS, JavaScript</h4>
+                  <p class="project_description-para">
+                    A bunch of photos of my cats because I love them. You can
+                    play a little game as them which I made using JavaScript.
+                    Also a donate button to my cats connected to a working
+                    paypal link.
+                  </p>
+                  <div class="project_description-links">
+                    <a
+                      href="https://github.com/JohnWinborne/Cat-Website"
+                      target="_blank"
+                      class="project_description-link"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                      href="https://socksandluna.com/"
+                      target="_blank"
+                      class="project_description-link"
+                    >
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project_wrapper">
+                <img
+                  src="assets/john_website.png"
+                  class="project_img"
+                  alt="Screenshot of my personal website"
+                />
+
+                <div class="project_description">
+                  <h3 class="project_description-title">Personal Website</h3>
+                  <h4>HTML, CSS, JavaScript</h4>
+                  <p class="project_description-para">
+                    My personal website with a about me section, previous work,
+                    projects, and contact info. You probably know this cause you
+                    are on this website right now! It also has a cool JavaScript
+                    button that inverts the colors.
+                  </p>
+                  <div class="project_description-links">
+                    <a
+                      href="https://github.com/JohnWinborne/webdev-Final_Project"
+                      target="_blank"
+                      class="project_description-link"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="" target="_blank" class="project_description-link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
     <section id="contact">
       <div class="social_list">
-            <a
-              href="https://www.linkedin.com/in/john-winborne-477024197/"
-              target="_blank"
-              class="social_link"
-            >
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a
-              href="https://github.com/JohnWinborne"
-              target="_blank"
-              class="social_link"
-            >
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="assets/Resume.png"
-              target="_blank"
-              class="social_link"
-            >
-              <i class="fa-solid fa-file-pdf"></i>
-            </a>
-          </div>
+        <a
+          href="https://www.linkedin.com/in/john-winborne-477024197/"
+          target="_blank"
+          class="social_link"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://github.com/JohnWinborne"
+          target="_blank"
+          class="social_link"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="assets/Resume.png" target="_blank" class="social_link">
+          <i class="fa-solid fa-file-pdf"></i>
+        </a>
+      </div>
     </section>
   </body>
 </html>
