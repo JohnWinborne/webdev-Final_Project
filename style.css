@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 
+/* general style for everything */
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@
   font-family: "Roboto", sans-serif;
 }
 
+/* when you jump to sections its smooth instead of jumping */
 html {
   scroll-behavior: smooth;
 }
@@ -20,18 +22,16 @@ p {
   font-size: 16px;
 }
 
-button {
-  cursor: pointer;
-}
-
 section {
   background-color: rgb(241, 239, 227);
 }
 
+/* color of selected text */
 .color {
   color: skyblue;
 }
 
+/* no underlines under a tags */
 a {
   text-decoration: none;
 }
@@ -42,10 +42,7 @@ LANDING PAGE
 
 */
 
-#landing-page {
-  min-height: 100vh;
-}
-
+/* centers the header and gives spacing */
 .header {
   width: 100%;
   max-width: 900px;
@@ -56,6 +53,7 @@ LANDING PAGE
   align-items: center;
 }
 
+/* make header image look good */
 .header_img {
   border-radius: 50%;
   width: 300px;
@@ -65,25 +63,7 @@ LANDING PAGE
   font-size: 25px;
   line-height: 2;
   max-width: 600px;
-}
-
-.social_list {
-  margin-top: 15px;
-  display: flex;
-}
-
-.social_link {
-  background-color: skyblue;
   color: black;
-  width: 50px;
-  height: 50px;
-  font-size: 25px;
-  margin-right: 12px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
 }
 
 /* 
@@ -92,7 +72,11 @@ NAVIGATION
 
 */
 
+/* fixed, top, and left so that its always at the top */
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,6 +90,7 @@ nav {
 #personal-logo {
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
 
 .nav_link-list {
@@ -200,7 +185,7 @@ nav {
   width: 100%;
 }
 
-.contact_list{
+.contact_list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,6 +194,25 @@ nav {
 .contact-text {
   text-align: center;
   padding-bottom: 15px;
+}
+
+.social_list {
+  margin-top: 15px;
+  display: flex;
+}
+
+.social_link {
+  background-color: skyblue;
+  color: black;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  margin-right: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 }
 
 .contact_form {
@@ -236,4 +240,121 @@ nav {
   border: solid 2px white;
   border-radius: 47%;
   margin: 20px;
+  cursor: pointer;
+}
+
+
+/* SWITCH COLOR */
+/* what the javascript adds or removes from the body element using DOM */
+.switch-color #personal-logo {
+  filter: invert(1);
+}
+
+
+.switch-color section {
+  background-color: black;
+}
+
+.switch-color .nav_link-anchor {
+  color: black;
+}
+
+.switch-color .btn {
+  border: 2px black solid;
+  background-color: white;
+}
+
+.switch-color .social_link,
+.switch-color .project_description,
+.switch-color .project_description-link,
+.switch-color .project_description-para,
+.switch-color .project_description-title,
+.switch-color .about-me,
+.switch-color .previous_work-header,
+.switch-color label {
+  color: white;
+}
+
+.switch-color nav {
+  background-color:rgb(241, 239, 227);
+}
+
+.switch-color .project_img {
+  border: 2px solid white;
+}
+
+/*  RESPOVISENESS */
+
+@media (max-width: 414px) {
+   nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .nav_link-list {
+    margin-top: 8px;
+  }
+
+  .header_img {
+    width: 200px;
+  }
+
+  .about-me {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .section_title, .project_description-title {
+    font-size: 30px;
+  }
+
+  .project_img {
+    width: 100%;
+  }
+
+  #message {
+    width: 90%;
+  }
+
+  .btn {
+    width: 85px;
+    height: 42px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 415px) and (max-width: 1024px) {
+  
+  nav {
+    flex-direction: column;
+    height: auto; /* fixes height */
+    padding: 15px 0;
+  }
+
+  .nav_link-list {
+    margin-top: 10px;
+  }
+
+  .header {
+    padding: 150px 20px 80px;
+  }
+
+  .header_img {
+    width: 260px;
+  }
+}
+
+@media (min-width: 1024px) {
+    .header_img {
+    width: 300px;
+  }
+
+  .about-me {
+    font-size: 22px;
+  }
+
+  .section_title, .project_description-title {
+    font-size: 50px;
+  }
 }

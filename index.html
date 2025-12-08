@@ -6,22 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>John Winborne</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Link for font awesome so I can use some <i> tags-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
   </head>
+
+  <!--landing page-->
   <body>
     <section id="landing-page">
       <nav>
+        <!--my logo that when you click it changes colors-->
         <figure>
           <img
             id="personal-logo"
             src="./assets/logo.png"
             alt="John Winborne logo"
+            onclick="changeColor()"
           />
+          <p class="color">Click me!</p>
         </figure>
+        <!--the nav link list with sections to jump to-->
         <ul class="nav_link-list">
           <li class="nav_link">
             <a href="#previous_work" class="nav_link-anchor">Previous Work</a>
@@ -38,43 +45,55 @@
         </ul>
       </nav>
       <header class="header">
+        <!--photo of ME-->
         <figure>
           <img src="assets/Me.jpg" class="header_img" alt="Photo of John" />
         </figure>
-
+        <!--about section-->
         <div>
           <h1 class="color">Hi, I'm John.</h1>
           <p class="about-me">
-            <!--write more about me -->
-            I'm a <b class="color">Student at Portland State University</b>
-            and I like web design.
-            <br />
-            Here are some things about me.
+            <!--about me -->
+            I'm a <b class="color">Computer Science student at Portland State University</b>
+            and I like web design. I like to turn ideas into real projects using HTML, CSS,
+            and JavaScript, and I always like learning new tools to improve my work.
+            <br>
+            Outside of class, I like building personal projects like custom games and web design 
+            to help me grow as a developer. I care about making accessible, well structured code and making websites that are 
+            enjoyable to use. 
           </p>
         </div>
       </header>
     </section>
+
+    <!--Previous work section-->
     <section id="previous_work">
       <h1 class="previous_work-header">
         Here is where you can see my previous work
       </h1>
 
+      <!-- resume -->
       <figure class="previous_work-fig">
         <img src="assets/Resume.png" class="resume_img" alt="resume image" />
       </figure>
     </section>
+
+    <!-- Project section-->
     <section id="projects">
       <div class="projects_container">
         <div class="projects_row">
           <h1 class="section_title color">Some of my projects</h1>
           <ul>
+            <!--first project cat website-->
             <li class="project">
               <div class="project_wrapper">
+                <!--cat website photo-->
                 <img
                   src="assets/cat_website.png"
                   class="project_img"
                   alt="Screenshot of my Cat Website homepage"
                 />
+                <!--project description-->
                 <div class="project_description">
                   <h3 class="project_description-title">Cat Website</h3>
                   <h4>HTML, CSS, JavaScript</h4>
@@ -84,6 +103,7 @@
                     Also a donate button to my cats connected to a working
                     paypal link.
                   </p>
+                  <!--project links-->
                   <div class="project_description-links">
                     <a
                       href="https://github.com/JohnWinborne/Cat-Website"
@@ -103,14 +123,16 @@
                 </div>
               </div>
             </li>
+            <!--second project -->
             <li class="project">
               <div class="project_wrapper">
+                <!--project image-->
                 <img
                   src="assets/john_website.png"
                   class="project_img"
                   alt="Screenshot of my personal website"
                 />
-
+                <!--project description-->
                 <div class="project_description">
                   <h3 class="project_description-title">Personal Website</h3>
                   <h4>HTML, CSS, JavaScript</h4>
@@ -140,8 +162,10 @@
       </div>
     </section>
 
+    <!--contact section-->
     <section id="contact">
       <h1 class="contact-text color">Here is where you can find me</h1>
+      <!--Some info and places to find me-->
       <div class="contact_list">
         <a
           href="https://www.linkedin.com/in/john-winborne-477024197/"
@@ -161,9 +185,11 @@
           <i class="fa-solid fa-file-pdf"></i>
         </a>
       </div>
+      <!--contact form that doesn't work but is still there-->
       <form action="" class="contact_form">
         <h2 class="contact-text">or you can write me a message here</h2>
         <div class="contact-text">
+          <!--name field-->
           <label for="username">Name:</label>
           <input
           class="contact_input"
@@ -173,6 +199,7 @@
             placeholder="Full Name"
           />
         </div>
+        <!--email field-->
         <div class="contact-text">
           <label for="email">Email:  </label>
           <input
@@ -183,8 +210,10 @@
             placeholder="email address"
           />
         </div>
+        <!--message field-->
         <textarea name="message" id="message"> </textarea>
         <div class="contact-text">
+          <!--submit and reset buttons-->
           <input class="btn" type="submit" value="Submit" />
           <input class="btn" type="reset" value="Reset" />
         </div>
